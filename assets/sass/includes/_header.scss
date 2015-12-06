@@ -1,0 +1,381 @@
+.home{
+	.site-container{
+		overflow: hidden;
+		nav[role=navigation]{
+	        display: none;
+	    }
+	}
+}
+
+.site-header{
+	
+	z-index: 3;
+	width: 100%;
+	.wrap{
+		padding: 0;
+	}
+	@media screen and (min-width: em(1024)){
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}
+.site-header{
+	background-color: #fff;
+	height: 70px;
+    min-height: 70px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	.wrap{
+		padding: 0 0 0 2.5%;
+		@media screen and (min-width: em(1280)){
+			padding: 0 0 0 2.5%;
+		}
+		@media screen and (max-width: em(1023)){
+			padding: 0%;
+		}
+	}
+}
+.home{
+	.site-header{
+		position: relative;
+		background-color: #fff;
+		height: 93px;
+		min-height: 93px;
+		box-shadow: none;
+		.wrap{
+			padding: 10px 0 15px 2.5%;
+			@media screen and (min-width: em(1280)){
+				padding: 10px 0 15px 2.5%;
+			}
+		}
+		@media screen and (min-width: em(1024)){
+			position: fixed;
+			background-color: rgba(255,255,255,0.4);
+		}
+	}
+}
+.branding{
+	display: inline-block;
+	width: 145px;
+	padding-top: 8px;
+	height: 63px;
+	max-height: 63px;
+	svg{
+		width: 150px;
+		float: left;
+	}
+	p{ 
+		display: none;
+		margin: 15px 0 0 10px;
+		margin-bottom: 0;
+		font-family: $secondaryFont;
+		font-size: em(13);
+		font-weight: 400;
+		line-height: 1.2em;
+		color: #fff;
+		text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+		@media screen and (min-width: em(1228)){
+			display: inline-block;
+		}
+	}
+	@media screen and (min-width: em(1228)){
+		width: 410px;
+	}
+	@media screen and (max-width: em(1023)){
+		display: block;
+	    width: 150px;
+	    margin: 0 auto 0;
+	}
+}
+.branding--page{
+	display: inline-block;
+	width: 145px;
+	svg{
+		width: 135px;
+		float: left;
+	}
+	p{
+		display: none;
+		margin: 10px 0 0 10px;
+		margin-bottom: 0;
+		font-family: $secondaryFont;
+		font-size: em(13);
+		font-weight: 400;
+		line-height: 1.2em;
+		color: #000;
+		text-shadow: none;
+		@media screen and (min-width: em(1228)){
+			display: inline-block;
+		}
+	}
+	@media screen and (min-width: em(1228)){
+		width: 395px;
+	}
+	@media screen and (max-width: em(1023)){
+		display: block;
+	    width: 145px;
+	    margin: 0 auto 0;
+	}
+}
+
+.nav[role=navigation]{
+	@media screen and (max-width: em(1023)){
+		background-color: #fff;
+		width: 100%;
+		text-align: center;
+		float: none;
+		.menu{
+			li{
+				display: block;
+			}
+		}
+	}
+}
+.menu{
+}
+.gateway__remote{
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translatey(-50%);
+	font-family: $secondaryFont;
+	font-size: em(15);
+	font-weight: 400;
+	line-height: 1.2em;
+	color: #fff;
+	text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	text-decoration: none;
+	text-transform: uppercase;
+	&:hover,
+	&:focus{
+		color: #fff;
+		text-decoration: underline;
+	}
+	@media screen and (min-width: em(1024)){
+		display: block;
+	}
+}
+.search__wrap{
+	position: relative;
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: em(15);
+    max-width: 380px;
+    overflow: hidden;
+}
+.search__icon{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	line-height: 0;
+	margin-top: -3px;
+	svg{
+		width: 100%;
+	}
+}
+.search__controls{
+	display: inline-block;
+	margin-right: -380px;
+	transform: translatey(-3px);
+	input,
+	button,
+	.close__search{
+		display: inline-block;
+	}
+	input{
+		width: 300px;
+		padding: 0 10px;
+		border: none;
+		font-size: em(12);
+		font-family: $secondaryFont;
+		color: #000;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	::-webkit-input-placeholder {
+	   color: #000;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #000;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #000;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: #000;  
+	}
+	button{
+		background-color: #fff;
+		font-family: $primaryFont;
+		font-size: em(38);
+		line-height: 0em;
+		color: $primaryColor;
+		padding: 0;
+		transform: translatey(7px);
+	}
+	.close__search{
+		font-family: $primaryFont;
+		font-weight: 700;
+		font-size: em(20);
+		line-height: 0em;
+		color: #000;
+		text-decoration: none;
+		padding: 0 5px 0 10px;
+		transform: translatey(3px);
+	}
+}
+.mobile--icon{
+	display: block;
+    position: absolute;
+    top: 7px;
+    right: 2.5%;
+    font-size: 1.8em;
+    color: #000;
+    text-decoration: none;
+	@media screen and (min-width: em(1024)){
+		display: none;
+	}
+}
+.mobile--nav{
+	display: none;
+	z-index: 3;
+    position: relative;
+	@media screen and (max-width: em(1023)){
+		display: none;
+		background-color: #fff;
+		width: 100%;
+		margin-top: -1px;
+		overflow: scroll;
+	}
+	ul > li{
+		font-size: em(18);
+	}
+	li{
+		text-align: center;
+		width: 100%;
+		a{
+			color: #000;
+			text-decoration: none;
+			&:hover,
+			&:focus{
+				background-color: #fff;
+				color: $primaryColor;
+			}
+		}
+	}
+	.sub-menu{
+		display: block;
+		position: relative;
+		width: 100%;
+		background-color: #fff;
+		li{
+			a{
+				&:hover,
+				&:focus{
+					background-color: #fff;
+					color: $primaryColor;
+				}
+			}
+		}
+	}
+	.menu-item-has-children:nth-of-type(1) .sub-menu{
+		width: 100%;
+	}
+	.menu{
+		width: 100%;
+		li:nth-of-type(1){
+			> a{
+				display: none;
+			}
+		}
+	}
+	> div{
+		width: 100%;
+		padding: em(20) 0;
+	}
+	.nav__actions{
+		text-align: center;
+		display: block;
+
+	}
+}
+.back--wrap{
+	width: 185px;
+}
+.back-to{
+	background-color: $tertiaryColor;
+    display: none;
+    position: absolute;
+    bottom: -29px;
+    left: 2.5%;
+    height: 29px;
+    width: 185px;
+    padding: 2.5px 10px;
+    font-size: em(12);
+    color: #fff;
+    text-decoration: none;
+    &:hover,
+    &:focus{
+    	background-color: #000;
+    	color: $primaryColor;
+    }
+    .arrow{
+    	font-size: 1.3em;
+	    line-height: 0em;
+	    margin-right: 4px;
+    }
+    @media screen and (min-width: em(1024)){
+    	display: inline-block;
+    }
+}
+.back--sub{
+	opacity: 0;
+	position: absolute;
+    bottom: 200px;
+    left: 2.5%;
+    width: 185px;
+    // transition: 0.1s ease-in-out;
+	a{
+		background-color: #5d5d5d;
+    	display: block;
+	    height: 29px;
+	    width: 185px;
+	    padding: 2.5px 10px;
+	    font-size: .75em;
+	    color: #fff;
+	    text-decoration: none;
+	    &:hover,
+	    &:focus{
+	    	background-color: #000;
+	    	color: $primaryColor;
+	    }
+	}
+}
+.back--wrap:hover,
+.back--wrap:focus{
+	.back--sub{
+		opacity: 1;
+		bottom: -87px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
