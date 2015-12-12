@@ -1,14 +1,14 @@
 /*!*
  * CONTENTS
  *
+ * Layout
+ * Grid.................Bourbon Neat.
+ *
  * SETTINGS
  * Global...............Globally-available variables and config.
  *
  * TOOLS
  * Mixins...............Useful mixins.
- *
- * Layout
- * Grid...............Bourbon Neat.
  *
  * GENERIC
  * Normalize.css........A level playing field.
@@ -22,6 +22,7 @@
  *
  * COMPONENTS
  * Page-head............The main page header.
+ * Page-navigation......The main page navigation.
  * Page-foot............The main page footer.
  * Buttons..............Button elements.
  *
@@ -29,38 +30,61 @@
  * Text.................Text helpers.
  */
 
-// Global
-@import "includes/_globals.scss";
-
-
-
-// Tools
-@import "includes/_mixins.scss";
-
-
-
-// Layout
+/*------------------------------------*\
+   #LAYOUT
+\*------------------------------------*/
 @import "./bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
 @import "./bower_components/neat/app/assets/stylesheets/_neat.scss";
 
 
 
-// Generic
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+@import "includes/_globals.scss";
+
+
+
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+@import "includes/_mixins.scss";
+
+
+
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
 @import "includes/_normalize.scss";
+@import "includes/_box-sizing.scss";
 
 
 
-// Header, Navigation, and Footer
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+@import "includes/_headings.scss";
+
+
+
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+@import "includes/_wrappers.scss";
+
+
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
 @import "includes/_header.scss";
-@import "includes/_navigation.scss";
 @import "includes/_footer.scss";
-
-
-
-// Content
+@import "includes/_buttons.scss";
 @import "includes/_content.scss";
 
 
 
-// Helpers
+/*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
 @import "includes/_helpers.scss";

@@ -1,0 +1,10 @@
+h1,h2,h3,h4{
+  margin: 0;
+}
+h1{
+  font-family: $subHeadFont;
+  font-size: em(28);
+  letter-spacing: 0.15em;
+  color: $bodyColor;
+  text-transform: uppercase;
+}

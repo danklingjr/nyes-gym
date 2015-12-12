@@ -1,25 +1,28 @@
-/*Theme colors, fonts, and patterns
-
-*Table of Contents
-
-*Theme Colors
-  --Primary
-  --Variations
-
-*Typography
-  --Base size
-  --Fonts
-  --Defaults
-
+/*!Theme colors, fonts, and patterns
+*
+* Table of Contents
+*
+* Theme Colors
+*  --Primary
+*  --Variations
+*
+* Typography
+*  --Base size
+*  --Fonts
+*  --Defaults
+*
 */
+
+
 
 /*
 Theme Colors
 */
 //Primary
-$primaryColor: #88c541; //Green
+$brandColor: #8c0000; //Green
 $secondaryColor: #4ea699; //Blue green
 $tertiaryColor: #5d5d5d;
+$bodyColor: #161616;
 // $accentColor: #252525;
 // $lightGray: #252525;
 
@@ -29,6 +32,9 @@ $secondaryAlt: darken(#4ea699,10);
 // $secondaryLight: #252525;
 // $tertiaryAlt: darken(#252525,10);
 // $accentAlt: darken(#252525,10);
+
+
+
 
 /*
 Typography
@@ -40,19 +46,19 @@ $browser-context: 16; // Default
   @return #{$pixels/$context}em;
 }
 
+
 //Fonts
 $headlineFont: "refrigerator-deluxe",sans-serif;
-$subHeadlineFont: "proxima-nova",sans-serif;
+$subHeadFont: "proxima-nova",sans-serif;
 $bodyFont: "ff-tisa-web-pro",serif;
+
 
 //time
 $time: 0.2s;
 
+
 //Spacing
 $margin: em(60px);
-$font-header: sans-serif;
-$font-nav: sans-serif;
-$font-body: sans-serif;
 
 h1, h2 {
 
@@ -73,41 +79,41 @@ a, svg {
 }
 
 ::-webkit-input-placeholder {
-   color: transparentize($secondaryColor, 0.5);
+   color: transparentize($brandColor, 0.5);
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: transparentize($secondaryColor, 0.5);
+   color: transparentize($brandColor, 0.5);
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: transparentize($secondaryColor, 0.5);
+   color: transparentize($brandColor, 0.5);
 }
 
 :-ms-input-placeholder {
-   color: transparentize($secondaryColor, 0.5);
+   color: transparentize($brandColor, 0.5);
 }
 
-//Patterns
-.button{
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-    padding: 10px 20px;
-    span{
-        margin-left: 20px;
-        font-size: em(20);
-        line-height: 0;
-    }
-    &:hover,
-    &:focus{
-        background-color: darken($primaryColor, 10);
-    }
+::selection {
+  background: $brandColor; /* WebKit/Blink Browsers */
+  color: #fff;
 }
-.button--black{
-    color: #fff;
-    background-color: #000 !important;
+::-moz-selection {
+  background: $brandColor; /* Gecko Browsers */
+  color: #fff;
 }
-.button--qf{
-    color: #fff;
+
+
+
+//Defaults
+html,
+body{
+  height: 100%;
 }
+body{
+  background-color: $bodyColor;
+  padding: 0 10%;
+}
+
+
+//
