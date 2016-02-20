@@ -36,7 +36,7 @@
 @import "./bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
 @import "./bower_components/neat/app/assets/stylesheets/_neat.scss";
 
-
+ 
 
 /*------------------------------------*\
     #SETTINGS
@@ -78,9 +78,13 @@
     #COMPONENTS
 \*------------------------------------*/
 @import "includes/_header.scss";
+@import "includes/_navigation.scss";
 @import "includes/_footer.scss";
 @import "includes/_buttons.scss";
 @import "includes/_content.scss";
+@import "includes/_fighting-fitness.scss";
+@import "includes/_ring-rental.scss";
+@import "includes/_contact.scss";
 
 
 

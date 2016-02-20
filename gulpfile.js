@@ -12,12 +12,7 @@ var config = {
     fontDir: assets + '/fonts',
     distDir: assets + '/dist',
     bowerDir: './bower_components'
-}
-
-gulp.task('icons', function() {
-    return gulp.src( config.bowerDir + '/fontawesome/fonts/**.*' )
-        .pipe( gulp.dest( config.fontDir ));
-});
+};
 
 gulp.task('browserify', function() {
     return browserify( config.jsDir + '/theme.js' )
@@ -39,7 +34,7 @@ gulp.task('scripts', ['browserify'], function() {
         .pipe( $.uglify() )
         .pipe( gulp.dest( config.distDir ))
         .pipe( browsersync.reload({ stream: true, once: true }));
-    });
+});
 
 gulp.task('styles', function() {
     return gulp.src( config.sassDir + '/**/*.scss' )

@@ -1,15 +1,28 @@
 .header{
-	position: fixed;
-	z-index: 3;
-	top: 0;
-	left: 10%;
-	width: 80%;
+
+	left: 0%;
+	width: 100%;
   background-color: #fff;
   padding-top:    em(10);
   padding-bottom: em(10);
   padding-right:  2.5%;
   padding-left:   2.5%;
 	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	@include media(795px) {
+		position: fixed;
+		z-index: 3;
+		top: 0;
+	}
+	@include media(1200px) {
+		left: 5%;
+		width: 90%;
+	}
+	@include media(1440px) {
+		padding-right:  2.5%;
+	  padding-left:   2.5%;
+		left: 10%;
+		width: 80%;
+	}
 }
 .branding{
   font-family: $headlineFont;
@@ -17,31 +30,14 @@
   font-weight: 900;
   color: $bodyColor;
 	float: left;
-}
-.main-nav{
-	float: right;
-	display: inline-block;
-	padding-top: em(8);
-	ul{
-		display: inline-block;
+	a {
+		text-decoration: none;
+		color: $bodyColor;
 	}
-	li{
-		display: inline-block;
-		margin-left: em(20);
-		a{
-			font-family: $subHeadFont;
-			font-size: em(16);
-			color: $bodyColor;
-			letter-spacing: 0.18em;
-			text-transform: uppercase;
-			text-decoration: none;
-			&:hover,
-			&:focus{
-				color: $brandColor;
-			}
-		}
+	@media screen and (max-width: 794px) {
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+		display: block;
 	}
-}
-.nav--list{
-	margin: 0;
 }

@@ -4,7 +4,21 @@
 	background-image:    url(../images/hero-gym.jpg);
 	background-size:     cover;
 	background-position: center center;
-	margin-top: 55px;
+
+	@include media(795px) {
+		margin-top: 55px;
+	}
+}
+.hero--page{
+	height: 250px;
+	background-image:    url(../images/hero-gym.jpg);
+	background-size:     cover;
+	background-position: center center;
+
+	@include media(795px) {
+		margin-top: 55px;
+		height: 400px;
+	}
 }
 .hero__text{
 	display: block;
@@ -12,8 +26,14 @@
 	position: relative;
 	top: 50%;
 	transform: translatey(-50%);
-	text-align: left;
-	padding-left: 15%;
+	text-align: center;
+	margin: 0 auto;
+
+	@media screen and (min-width: 1080px) {
+		padding-left: 15%;
+		text-align: left;
+	}
+
 	span,
 	b,
 	i{
@@ -23,10 +43,12 @@
 		color: #fff;
 		text-transform: uppercase;
 	}
+
 	span{
 	  font-size: em(50);
 		letter-spacing: 0.15em;
 	}
+
 	b{
 		display: inline-block;
 		font-size: em(150);
@@ -36,11 +58,24 @@
 		padding: 5px 20px;
 		margin-top: 10px;
 		margin-bottom: 10px;
+
+		.hero--home &{
+			font-size: em(150);
+		}
+
+		.hero--page &{
+			font-size: em(80);
+		}
 	}
+
+
 	i{
 		font-size: em(22);
 		font-style: normal;
 		letter-spacing: 0.15em;
+	}
+	@media screen and (max-width: em(1079)) {
+		font-size: 65%;
 	}
 }
 
@@ -55,9 +90,11 @@
 .intro{
 	padding: em(80) 5%;
 	text-align: center;
+
 	h1{
 		margin-bottom: em(10);
 	}
+
 	p{
 		width: 100%;
 		max-width: em(850);
@@ -65,6 +102,16 @@
 		font-size: em(18);
 		line-height: 1.8em;
 		margin: em(40) auto 0;
+	}
+
+	&--page {
+		padding: em(40) 5%;
+		@include media(795px) {
+			padding: em(80) 5%;
+		}
+		h1 {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -77,18 +124,28 @@
 	padding-left: 15%;
 	background-size: cover;
 	background-position: center center;
+	position: relative;
+
+	@media screen and (max-width: 799px) {
+		padding-left: 0;
+		text-align: center;
+	}
+
 	div{
 		display: block;
-		position: relative;
+		position: absolute;
+		// height: 124px;
 		top: 50%;
-		transform: translatey(100%);
+		transform: translatey(-50%);
 	}
+
 	h2,
 	p{
 		font-family: $headlineFont;
 		color: #fff;
 		text-transform: uppercase;
 	}
+
 	h2{
 		display: inline-block;
 		font-size: em(70);
@@ -96,7 +153,11 @@
 		background-color: $brandColor;
 		padding: 5px 20px;
 		margin-bottom: 10px;
+		@media screen and (max-width: 799px) {
+			font-size: em(45);
+		}
 	}
+
 	p{
 		font-size: em(22);
 		font-weight: 400;
@@ -104,12 +165,15 @@
 		margin: 0;
 	}
 }
+
 .the-gym{
 	background-image: url(../images/the-gym.jpg);
 }
+
 .fighting-fitness{
 	background-image: url(../images/fighting-fit.jpg);
 }
+
 .ring-rental{
 	background-image: url(../images/ring-rental.jpg);
 }

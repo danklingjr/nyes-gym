@@ -13,6 +13,10 @@
   &:hover,
   &:focus{
     background-color: #fff;
-    color: $bodyColor;
+    color: $black;
+  }
+  &--red {
+    background-color: $brandColor;
+    margin-top: 0;
   }
 }

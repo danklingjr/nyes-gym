@@ -22,4 +22,8 @@
 	text-transform: uppercase;
 	background-color: $brandColor;
 	padding: em(10) em(10);
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
 }

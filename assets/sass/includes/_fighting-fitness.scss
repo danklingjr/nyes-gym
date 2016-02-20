@@ -1,0 +1,83 @@
+// Fighting Fitness
+.class__details {
+	background-color: $white;
+	
+	@media screen and (min-width: 1080px) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		justify-content: space-between;
+	}
+}
+
+.trainers,
+.class__schedule {
+	width: 100%;
+
+	h2 {
+		font-family: $subHeadFont;
+		font-size: em(24);
+	  letter-spacing: 0.15em;
+		text-transform: uppercase;
+	}
+}
+.trainers {
+	padding: 20px 2.5% 20px 2.5%;
+	// background-image: url(../images/the-gym.jpg);
+	color: $black;
+	flex: 3;
+}
+
+.trainer {
+	background-color: $white;
+	padding: 20px 30px;
+	margin: 10px 0;
+}
+
+.trainer__name {
+	font-family: $subHeadFont;
+	font-size: em(18);
+	letter-spacing: 0.15em;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.class__schedule {
+	background-color: #f0f0f0;
+	padding: 20px;
+	color: $black;
+	border-left: 5px solid $brandColor;
+	flex: 2;
+
+	p {
+		display: inline-block;
+	}
+
+	.day {
+		font-family: $subHeadFont;
+		font-size: em(18);
+	  letter-spacing: 0.15em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	ul,li {
+		list-style: none;
+	}
+
+	.day__schedule {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		.day {
+			flex: 1 1 25px;
+		}
+		ul {
+			    flex: 3 3 325px;
+		}
+	}
+}

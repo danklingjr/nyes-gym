@@ -1,0 +1,160 @@
+// Fighting Fitness
+.ring-rental-overview {
+
+	@media screen and (min-width: $lake) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.ring__title {
+	font-family: $subHeadFont;
+	font-size: em(18);
+	letter-spacing: 0.15em;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.ring-rental {
+	&__text,
+	&__graphic {
+		width: 100%;
+
+		@media screen and (min-width: $lake) {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	&__text {
+		padding: 40px 20px 0;
+
+		@media screen and (min-width: $lake) {
+			padding: 0 20px 0 50px;
+		}
+	}
+
+	&__graphic {
+		position: relative;
+
+		img {
+			width: 100%;
+
+
+			@media screen and (min-width: $lake) {
+				box-shadow: 0 0 35px rgba($black, 0.45);
+			}
+		}
+
+		.graphic__text {
+			position: absolute;
+			bottom: 60px;
+			left: 0;
+			p {
+				display: inline-block;
+				background-color: $brandColor;
+				font-family: $headlineFont;
+				font-size: 28px;
+				font-weight: 700;
+				color: $white;
+				text-transform: uppercase;
+				padding: 5px 10px;
+				margin: 10px 0 0 0;
+			}
+		}
+	}
+}
+
+.ring__type {
+	margin-bottom: 40px;
+}
+
+.ring-rental-gallery {
+	background-color: $black;
+	padding: 50px 40px;
+	margin-top: 20px;
+
+	@media screen and (min-width: $lake) {
+		margin-top: 100px;
+	}
+
+	h2 {
+		font-family: $headlineFont;
+		font-size: 28px;
+		font-weight: 700;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}
+
+.gallery__wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.gallery__image {
+	width: 100%;
+	margin: 0 0 10px;
+
+	@media screen and (min-width: 1080px) {
+		width: 46%;
+		margin: 10px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		width: 23%;
+	}
+
+	a {
+		position: relative;
+		display: block;
+
+		&:before {
+			content: '';
+			opacity: 0;
+			display: block;
+			background-color: rgba($black, 0.9);
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: 0.2s ease-in-out;
+		}
+
+		&:after {
+			content: 'view';
+			display: block;
+			opacity: 0;
+			position: absolute;
+			z-index: 3;
+			top: 50%;
+			width: 100%;
+			font-family: $headlineFont;
+			font-size: 22px;
+			font-weight: 700;
+			color: $white;
+			text-transform: uppercase;
+			text-align: center;
+			transform: translateY(-50%);
+			transition: 0.2s ease-in-out;
+		}
+
+		&:hover:before,
+		&:hover:after {
+			opacity: 1;
+		}
+	}
+
+	img {
+		width: 100%;
+		display: block;
+	}
+}

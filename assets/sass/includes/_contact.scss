@@ -1,0 +1,22 @@
+.contact__form {
+	width: 100%;
+	max-width: em(800);
+	margin: 0 auto;
+
+	label,
+	input,
+	textarea {
+		font-family: $bodyFont;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		padding: 10px;
+		border: 2px solid $black;
+		margin-bottom: 20px;
+	}
+	textarea {
+		height: 300px;
+	}
+}
